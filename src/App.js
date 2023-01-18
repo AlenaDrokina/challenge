@@ -1,13 +1,11 @@
-import './App.css';
-import ExplorePublications from './components/ExplorePublications';
-
-
-
-
+import "./App.css";
+import ExplorePublications from "./components/ExplorePublications";
 
 function App() {
   return (
-        <ExplorePublications></ExplorePublications>
+    <div className="App">
+      <ExplorePublications></ExplorePublications>
+    </div>
   );
 }
 

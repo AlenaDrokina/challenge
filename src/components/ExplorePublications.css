@@ -1,0 +1,44 @@
+.top h1 {
+  margin-left: 30px;
+  margin-top: 5px;
+  font-family: Arial, Lucida Console, sans-serif;
+  font-size: 63px;
+}
+
+.ExplorePublications {
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+}
+.top h4 {
+  /* margin-left: 10px; */
+  margin-top: -11px;
+  font-size: 15px;
+  color: rgb(145, 144, 144);
+}
+.top h5 {
+  /* margin-left: 10px; */
+  margin-top: 50px;
+
+  font-size: 15px;
+
+  color: rgb(145, 144, 144);
+}
+button {
+  margin-top: -20px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  height: 31px;
+  width: 150px;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Lucida Console, sans-serif;
+}
+button:hover {
+  background-color: rgb(153, 153, 153);
+}
+.btn1 {
+  margin-right: 10px;
+}
+.btn2 {
+  margin-right: 10px;
+}

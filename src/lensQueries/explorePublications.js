@@ -1,8 +1,9 @@
-import { apolloClient } from './apollo-client';
+import { apolloClient } from "./apollo-client";
 // this is showing you how you use it with react for example
 // if your using node or something else you can import using
 // @apollo/client/core!
-import { gql } from '@apollo/client'
+import { gql } from "@apollo/client";
+import axios from "axios";
 
 const GET_PUBLICATIONS = `
 query($request: ExplorePublicationRequest!){
@@ -276,7 +277,6 @@ fragment ReferenceModuleFields on ReferenceModule {
     
 `;
 
-
 /**
  *     REQUEST CONFIG EXAMPLE
  *
@@ -289,21 +289,21 @@ fragment ReferenceModuleFields on ReferenceModule {
   limit:24
 }
  */
+
 export const explorePublications = (request) => {
   return new Promise(async (resolve, reject) => {
-    try{
+    try {
       const response = await apolloClient.query({
         query: gql(GET_PUBLICATIONS),
-        variables:
-            {
-              request
-            }
-      })
-      resolve(response)
-    }catch(err){
-      console.trace(err)
-      reject(err)
+        variables: {
+          request,
+        },
+      });
+      resolve(response);
+      console.log(response);
+    } catch (err) {
+      console.trace(err);
+      reject(err);
     }
-
-  })
-}
+  });
+};
