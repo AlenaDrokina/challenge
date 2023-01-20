@@ -3,7 +3,7 @@ import { apolloClient } from "./apollo-client";
 // if your using node or something else you can import using
 // @apollo/client/core!
 import { gql } from "@apollo/client";
-import axios from "axios";
+// import axios from "axios";
 
 const GET_PUBLICATIONS = `
 query($request: ExplorePublicationRequest!){
@@ -290,6 +290,12 @@ fragment ReferenceModuleFields on ReferenceModule {
 }
  */
 
+// const resolvers = {
+//   Query: {
+//     Media: () => Media,
+//   },
+// };
+
 export const explorePublications = (request) => {
   return new Promise(async (resolve, reject) => {
     try {
@@ -300,7 +306,7 @@ export const explorePublications = (request) => {
         },
       });
       resolve(response);
-      console.log(response);
+      // console.log(response);
     } catch (err) {
       console.trace(err);
       reject(err);
